@@ -1,4 +1,4 @@
-
+# an object for each individual item that it monitors
 
 
 class Monitor(object):
@@ -7,6 +7,7 @@ class Monitor(object):
         self.author = author
         self.url = url
 
+    #for testing
     def printMon(self):
         print(self.author)
         print(self.url)
