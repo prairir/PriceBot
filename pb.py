@@ -1,10 +1,11 @@
 import discord
-from listings import Monitor
-
+from PriceBot import listings
+from time import sleep
 
 client = discord.Client()
 monitors = []
 checkings = []
+
 
 @client.event
 async def on_ready():
@@ -17,7 +18,7 @@ async def on_ready():
 @client.event
 async def on_message(message):
     if message.content.startswith('!add'):
-        monitors.append(Monitor(message.author, message.content[5:]))
+        monitors.append(listings.Monitor(message.author, message.content[5:]))
         print('------')
         print(len(monitors))
         monitors[len(monitors) - 1].printMon()
@@ -40,6 +41,13 @@ async def on_message(message):
 
         if b is True:
             print("url not found")
+
+    # for testing mentions through discord
+    if message.content.startswith('!test'):
+        fmt = '@{} hello'
+        sleep(3)
+        authors = str(message.author).split('#')
+        await client.send_message(message.channel, fmt.format(authors[0]))
 
     if message.content.startswith('!print'):
         for i in range(len(monitors) - 1):
