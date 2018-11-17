@@ -1,5 +1,4 @@
 import discord
-from PriceBot import listings
 from time import sleep
 
 client = discord.Client()
