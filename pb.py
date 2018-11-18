@@ -19,7 +19,9 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    print("hello")
+    if message.content.startswith('!help'):
+        await client.send_message(message.channel, '''```!help - displays this message \n!addurl - watches the url given \n!add - watches the first amazon item \n!search - searches 10 items```''')
+
 
 client.run(token)
 token.close()
