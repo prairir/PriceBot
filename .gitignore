@@ -2,8 +2,8 @@
 Thumbs.db
 ehthumbs.db
 
-#text file
-*.txt
+#key file
+*.key
 
 # Folder config file
 Desktop.ini
