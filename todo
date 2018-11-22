@@ -1,7 +1,18 @@
+overall goals
 1. get rid of old crap - done
 2. impliment database
-3. impliment webcrawler
+3. impliment amazon api
 4. add the ability to search ability for an item
 5. add straight up url for item
 6. track item price change with timestamp
 
+indepth
+1. get rid of crap - done
+2. impliment sqlite database
+3. create regex to parse through url - done
+4. parse url using regex
+5. add arguement parser to add different options like region or number of pages to look through 
+6. parse through search feature and send information back to user
+7. get response for searched item 
+8. add somekind of database to object tool
+9. watch and update the price of an item
