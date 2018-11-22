@@ -1,5 +1,6 @@
 import discord
 import asyncio
+import re
 from time import sleep
 
 client = discord.Client()
@@ -8,6 +9,7 @@ checkings = []
 token = open('token.txt', 'r')
 token = token.read()
 
+url_reg=r"(?i)amazon\.(ca|com|jp|au|uk|br|de|es|fr|in|it|mx|nl|sg)/([^\s]+)"
 
 @client.event
 async def on_ready():
@@ -20,8 +22,10 @@ async def on_ready():
 @client.event
 async def on_message(message):
     if message.content.startswith('!help'):
-        await client.send_message(message.channel, '''```!help - displays this message \n!addurl - watches the url given \n!add - watches the first amazon item \n!search - searches 10 items```''')
-
+        await client.send_message(message.channel, '''```!help - displays this message \n!addurl - watches the url given \n!add - watches the first amazon item it finds \n!search - searches 10 items```''')
+    
+    if message.content.startswith('!addurl'):
+        url = message.split()[1]
 
 client.run(token)
 token.close()
