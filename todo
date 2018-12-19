@@ -10,9 +10,10 @@ indepth
 1. get rid of crap - done
 2. impliment sqlite database
 3. create regex to parse through url - done
-4. parse url using regex
-5. add arguement parser to add different options like region or number of pages to look through 
-6. parse through search feature and send information back to user
-7. get response for searched item 
-8. add somekind of database to object tool
-9. watch and update the price of an item
+4. make objects for the seperate commands
+5. parse url using regex
+6. add arguement parser to add different options like region or number of pages to look through 
+7. parse through search feature and send information back to user
+8. get response for searched item 
+9. add somekind of database to object tool
+10. watch and update the price of an item
